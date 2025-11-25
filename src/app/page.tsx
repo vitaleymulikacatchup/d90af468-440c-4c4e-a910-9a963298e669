@@ -1,5 +1,5 @@
 "use client";
-import ThemeProvider from '@/components/providers/ThemeProvider';
+import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import MetricCardTwo from '@/components/sections/metrics/MetricCardTwo';
 
 export default function Home() {
@@ -31,7 +31,6 @@ export default function Home() {
             textboxLayout="default"
             gridVariant="uniform-all-items-equal"
             animationType="slide-up"
-            carouselMode="buttons"
           />
         </div>
       </main>
