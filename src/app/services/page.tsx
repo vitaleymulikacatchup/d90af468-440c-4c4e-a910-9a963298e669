@@ -79,7 +79,7 @@ export default function ServicesPage() {
                 {
                   text: "Learn More",
                   href: "https://example.com/web-app-package"
-                ]
+                }
               ],
               features: [
                 "Full web application",

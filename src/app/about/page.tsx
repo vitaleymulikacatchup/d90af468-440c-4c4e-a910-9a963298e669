@@ -2,14 +2,13 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarStyleMinimal from "@/components/navbar/NavbarStyleMinimal";
-import HeroCarouselLogo from "@/components/sections/hero/heroCarouselLogo/HeroCarouselLogo";
 import TextSplitAbout from "@/components/sections/about/TextSplitAbout";
-import FeatureCardEight from "@/components/sections/feature/FeatureCardEight";
+import FaqSplitText from "@/components/sections/faq/FaqSplitText";
 import FooterSocial from "@/components/sections/footer/FooterSocial";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import Link from "next/link";
 
-export default function HomePage() {
+export default function AboutPage() {
   return (
     <ThemeProvider
       defaultButtonVariant="hover-magnetic"
@@ -33,52 +32,13 @@ export default function HomePage() {
         />
       </div>
 
-      <div id="hero" data-section="hero">
-        <HeroCarouselLogo
-          logoText="ALEX CHEN"
-          description="Frontend Developer specializing in React, Next.js, and modern web technologies. Creating exceptional user experiences through clean code and innovative design."
-          buttons={[
-            {
-              text: "View Portfolio",
-              href: "/portfolio"
-            },
-            {
-              text: "Contact Me",
-              href: "/contact"
-            }
-          ]}
-          slides={[
-            {
-              imageSrc: "https://pixabay.com/get/g3787e50a33211517a544dc27c6443fcd9b8437a14003c2c7d28d31072ba4b7335d42f0e8fc6722a81034638750a1855f96fa0225af79065223bb6d3021d18515_1280.jpg",
-              imageAlt: "Alex Chen professional workspace"
-            },
-            {
-              imageSrc: "https://pixabay.com/get/g774d8fa905ca9e338346a3724d3556922920444fc6aa7066413e5cd54ea673f80c8ef11fd7c385e9001586742b437bf7d307671a6a679ec0b14037767a1025ae_1280.jpg",
-              imageAlt: "Frontend development setup"
-            },
-            {
-              imageSrc: "https://pixabay.com/get/g7891ce9093aa99119a4e6ee34b2717a749bfe6d99f52746d198f0ab59dbb759bb68cac1d048aa660fbb4a337fb0a6655927830484b90c51f116810eacd04c37d_1280.jpg",
-              imageAlt: "Modern developer office"
-            },
-            {
-              imageSrc: "https://pixabay.com/get/gda72d8aaa927d3952d5f3375ec416089defd6b862ecb52277753813bac08d70f93a6a5a4484e6fbc780eb0f5b00d2701729dba615ccda394225f61b73cac2704_1280.jpg",
-              imageAlt: "Professional developer portrait"
-            },
-            {
-              imageSrc: "https://pixabay.com/get/gcd8e07aa0f92dd71e77d6cbeab8fbc58707b5e3232a6b011dbe3a353e0fdb91e346fc08e4bdd5fac3cb3c6eddae0c9aa1bfd7b77dedfcd7eb22cacda77c6bf6b_1280.jpg",
-              imageAlt: "JavaScript coding environment"
-            }
-          ]}
-          autoplayDelay={4000}
-        />
-      </div>
-
       <div id="about" data-section="about">
         <TextSplitAbout
           title="About Me"
           description={[
             "I'm a passionate frontend developer with 5+ years of experience creating modern, responsive web applications. I specialize in React, Next.js, TypeScript, and modern CSS frameworks.",
-            "My expertise spans from pixel-perfect UI implementation to complex state management and performance optimization. I love turning design concepts into interactive, accessible, and performant web experiences."
+            "My expertise spans from pixel-perfect UI implementation to complex state management and performance optimization. I love turning design concepts into interactive, accessible, and performant web experiences.",
+            "When I'm not coding, I enjoy contributing to open-source projects, writing technical articles, and staying up-to-date with the latest web development trends and best practices."
           ]}
           buttons={[
             {
@@ -86,11 +46,47 @@ export default function HomePage() {
               href: "https://example.com/resume.pdf"
             },
             {
-              text: "View Skills",
+              text: "View Portfolio",
               href: "/portfolio"
             }
           ]}
           showBorder={true}
+        />
+      </div>
+
+      <div id="faq" data-section="faq">
+        <FaqSplitText
+          sideTitle="Frequently Asked Questions"
+          sideDescription="Common questions about my development process and services"
+          textPosition="left"
+          animationType="smooth"
+          faqs={[
+            {
+              id: "1",
+              title: "What technologies do you specialize in?",
+              content: "I specialize in React, Next.js, TypeScript, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, and various modern frontend frameworks. I also work with Node.js, Express, and databases for full-stack projects."
+            },
+            {
+              id: "2",
+              title: "What's your typical project timeline?",
+              content: "Project timelines vary based on complexity. A landing page typically takes 1-2 weeks, while a full web application can take 6-12 weeks. I provide detailed timelines during our initial consultation."
+            },
+            {
+              id: "3",
+              title: "Do you provide ongoing support?",
+              content: "Yes, I offer ongoing support and maintenance packages. This includes bug fixes, performance monitoring, security updates, and feature enhancements based on your needs."
+            },
+            {
+              id: "4",
+              title: "Can you work with existing design mockups?",
+              content: "Absolutely! I can work with Figma, Adobe XD, Sketch, or any other design files. I ensure pixel-perfect implementation while maintaining responsive design principles."
+            },
+            {
+              id: "5",
+              title: "What's your development process?",
+              content: "I follow an agile approach: discovery & planning, design review, development with regular check-ins, testing & quality assurance, deployment, and post-launch support."
+            }
+          ]}
         />
       </div>
 
